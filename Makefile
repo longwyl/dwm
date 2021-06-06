@@ -27,8 +27,6 @@ dwm: ${OBJ}
 
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
-	rm *.orig
-	rm *.rej
 
 
 dist: clean
