@@ -69,6 +69,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *broswer1[]  = { "google-chrome-stable", NULL };
 static const char *fileManager[]  = { "dolphin", NULL };
+static const char *pavucontrol[]  = { "pavucontrol", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -78,6 +79,7 @@ static Key keys[] = {
 	{ MODKEY,            	       		XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,               				XK_c,      spawn,          {.v = broswer1 } },
 	{ MODKEY,               				XK_e,      spawn,          {.v = fileManager } },
+	{ MODKEY,               				XK_v,      spawn,          {.v = pavucontrol } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
