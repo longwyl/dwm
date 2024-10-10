@@ -70,8 +70,10 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *broswer1[]  = { "google-chrome-stable", NULL };
 static const char *fileManager[]  = { "dolphin", NULL };
 static const char *pavucontrol[]  = { "pavucontrol", NULL };
+// static const char scratchpadname[] = "scratchpad";
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+// static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = {"alacritty", "-T", scratchpadname, NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
