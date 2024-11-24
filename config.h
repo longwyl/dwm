@@ -2,7 +2,7 @@
 
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 0};
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -22,7 +22,8 @@ static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+    [SchemeSel]  = { "#eeeeee", "#005577", "#FFA500" },
 };
 
 /* tagging */
@@ -70,7 +71,8 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *broswer1[]  = { "google-chrome-stable", NULL };
 static const char *fileManager[]  = { "dolphin", NULL };
 static const char *pavucontrol[]  = { "pavucontrol", NULL };
-// static const char scratchpadname[] = "scratchpad";
+static const char *clashVerge[]  = { "clash-verge", NULL };
+static const char *youtubeMusic[]  = { "youtube-music", NULL };
 static const char scratchpadname[] = "scratchpad";
 // static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 static const char *scratchpadcmd[] = {"alacritty", "-T", scratchpadname, NULL};
@@ -82,6 +84,8 @@ static Key keys[] = {
 	{ MODKEY,               				XK_c,      spawn,          {.v = broswer1 } },
 	{ MODKEY,               				XK_e,      spawn,          {.v = fileManager } },
 	{ MODKEY,               				XK_v,      spawn,          {.v = pavucontrol } },
+	{ MODKEY,               				XK_x,      spawn,          {.v = youtubeMusic } },
+	{ MODKEY,               				XK_z,      spawn,          {.v = clashVerge } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
